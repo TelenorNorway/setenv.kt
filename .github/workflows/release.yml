@@ -71,7 +71,7 @@ jobs:
         run: |
           git config user.name github-actions[bot]
           git config user.email 41898282+github-actions[bot]@users.noreply.github.com
-          git tag v$VERSION
-          git push -u origin v$VERSION
+          git tag $VERSION
+          git push -u origin $VERSION
           # todo, upload release artifacts
           # gh release create --verify-tag -t $TITLE
