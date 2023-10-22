@@ -25,7 +25,7 @@ fun setenv(name: String, value: String?) {
 	env[name] = value
 }
 
-fun snapshotEnv(): EnvironmentSnapshot {
+fun envSnapshot(): EnvironmentSnapshot {
 	val snapshot = mutableMapOf<String, String?>()
 	snapshot.putAll(env)
 	return EnvironmentSnapshot(snapshot)
@@ -35,7 +35,7 @@ fun clearEnv() {
 	env.clear()
 }
 
-fun resetEnv(snapshot: EnvironmentSnapshot) {
+fun restoreEnv(snapshot: EnvironmentSnapshot) {
 	clearEnv()
 	env.putAll(snapshot.environment)
 }
