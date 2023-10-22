@@ -24,3 +24,18 @@ fun setenv(vararg entries: Pair<String, String?>) {
 fun setenv(name: String, value: String?) {
 	env[name] = value
 }
+
+fun snapshotEnv(): Map<String, String?> {
+	val snapshot = mutableMapOf<String, String?>()
+	snapshot.putAll(env)
+	return snapshot
+}
+
+fun clearEnv() {
+	env.clear()
+}
+
+fun putenv(snapshot: Map<String, String?>) {
+	clearEnv()
+	env.putAll(snapshot)
+}
