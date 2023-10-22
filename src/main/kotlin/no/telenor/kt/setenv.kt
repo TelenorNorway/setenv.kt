@@ -25,17 +25,21 @@ fun setenv(name: String, value: String?) {
 	env[name] = value
 }
 
-fun snapshotEnv(): Map<String, String?> {
+fun snapshotEnv(): EnvironmentSnapshot {
 	val snapshot = mutableMapOf<String, String?>()
 	snapshot.putAll(env)
-	return snapshot
+	return EnvironmentSnapshot(snapshot)
 }
 
 fun clearEnv() {
 	env.clear()
 }
 
-fun putenv(snapshot: Map<String, String?>) {
+fun resetEnv(snapshot: EnvironmentSnapshot) {
 	clearEnv()
-	env.putAll(snapshot)
+	env.putAll(snapshot.environment)
 }
+
+typealias Environment = Map<String, String?>
+
+class EnvironmentSnapshot internal constructor(internal val environment: Environment)
