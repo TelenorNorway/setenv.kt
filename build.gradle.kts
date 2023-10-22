@@ -1,6 +1,6 @@
 plugins {
 	kotlin("jvm") version "1.9.0"
-	id("no.ghpkg") version "0.3.1"
+	id("no.ghpkg") version "0.3.2"
 	`maven-publish`
 }
 
