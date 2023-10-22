@@ -13,7 +13,7 @@ _Follow [this guide](https://github.com/testersen/no.ghpkg) on how to set up you
 
 ```kt
 plugins {
-	id("no.ghpkg") version "0.3.2"
+	id("no.ghpkg") version "0.3.3"
 }
 
 repositories {
