@@ -30,11 +30,11 @@ dependencies {
 ## Usage
 
 ```kt
-import no.telenor.kt.setenv
+import no.telenor.kt.env.Environment
 
-setenv("my variable", "my value")
+Environment.set("my variable", "my value")
 
-setenv(
+Environment.set(
 	"my variable 1" to "my value 1",
 	"my variable 2" to "my value 2",
 )

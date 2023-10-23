@@ -1,4 +1,4 @@
-import no.telenor.kt.setenv
+import no.telenor.kt.env.setenv
 import kotlin.test.Test
 import kotlin.test.assertEquals
 
