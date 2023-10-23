@@ -1,4 +1,4 @@
-import no.telenor.kt.env.setenv
+import no.telenor.kt.env.Environment
 import kotlin.test.Test
 import kotlin.test.assertEquals
 
@@ -9,7 +9,7 @@ class Tests {
 			Math.random().toString() + Math.random().toString() + Math.random().toString() + Math.random().toString()
 		val randomValue2 =
 			Math.random().toString() + Math.random().toString() + Math.random().toString() + Math.random().toString()
-		setenv(randomValue1, randomValue2)
+		Environment.set(randomValue1, randomValue2)
 		assertEquals(System.getenv(randomValue1), randomValue2)
 	}
 }
