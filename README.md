@@ -17,7 +17,7 @@ plugins {
 }
 
 repositories {
-	git.hub("telenornorway", "env.kt")
+	git.hub("telenornorway", "setenv.kt")
 	// or <.. the below> if you're spicy 🌶️
 	// git.hub("telenornorway")
 }
